@@ -9,6 +9,7 @@
             <th scope="col">Email</th>
             <th scope="col">Imię</th>
             <th scope="col">Nazwisko</th>
+            <th scope="col">Numer telefonu</th>
             <th scope="col">Akcje</th>
 
         </tr>
@@ -19,7 +20,8 @@
                 <th scope="row">{{ $user->id }}</th>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->name }}</td>
-                <td>Nazwisko</td>
+                <td>{{ $user->surname }}</td>
+                <td>{{ $user->phone_number }}</td>
                 <td>Akcje</td>
             </tr>
         @endforeach
