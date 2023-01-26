@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome2');
 });
 
+Route::get('/users/list', [\App\Http\Controllers\UserController::class, 'index'])->middleware('auth');
 Route::get('/hello', [\App\Http\Controllers\HelloWorldController::class, 'show']);
 
 Auth::routes();
