@@ -2,23 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use Illuminate\Contracts\View\View;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+use PhpParser\Node\Stmt\TryCatch;
+use Illuminate\Foundation\Auth\User;
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return View
+     * @return \Illuminate\Http\Response
      */
-    public function index(): View
+    public function index()
     {
-        return view('users.index', [
-            'users' => User::paginate(3)
-        ]);
 
+        return view('users.index', [
+            'users' => User::paginate(10)]
+        );
     }
 
     /**
@@ -80,10 +82,20 @@ class UserController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function destroy($id)
+    public function destroy(User $user): JsonResponse
     {
-        //
+        try {
+            $user->delete();
+            return response() ->json([
+                'status' => 'success'
+            ]);
+        } catch (Exception $e) {
+            return response() ->json([
+                'status' => 'error',
+                'message' => 'Wystąpił błąd'
+            ])->setStatusCode(500);
+        }
     }
 }
