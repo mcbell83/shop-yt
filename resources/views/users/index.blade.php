@@ -22,11 +22,36 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->surname }}</td>
                 <td>{{ $user->phone_number }}</td>
-                <td>Akcje</td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete">
+                        X
+                    </button>
+                </td>
             </tr>
         @endforeach
         </tbody>
     </table>
     {{ $users->links() }}
 </div>
+@endsection
+
+@section('javascript')
+/*
+    $(document).ready(function() {
+        alert('Załadowano poprawnie');
+    });
+
+
+    $(function() {
+        console.log('hello');
+    });
+*/
+
+    $(function() {
+        $('.delete').click(function() {
+            alert('CLICK!!!!!');
+        });
+    });
+
+
 @endsection
