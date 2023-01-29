@@ -80,8 +80,8 @@
       </div>
     </div>
     <form class="col-md-4 order-md-1 col-lg-3 sidebar-filter">
-      <h3 class="mt-0 mb-5">{{__('shop.welcome.products')}} <span class="text-primary">{{count($products)}}</span></h3>
-      <h6 class="text-uppercase font-weight-bold mb-3">{{__('shop.welcome.categories')}}</h6>
+      <h3 class="mt-0 mb-5">Produkty:<!--{{ __('shop.welcome.products')}}--> <span class="text-primary">{{count($products)}}</span></h3>
+      <h6 class="text-uppercase font-weight-bold mb-3">Kategorie:<!--{{ __('shop.welcome.categories') }}--></h6>
         @foreach ( $categories as $category)
         <div class="mt-2 mb-2 pl-2">
             <div class="custom-control custom-checkbox">
@@ -93,14 +93,14 @@
 
 
       <div class="divider mt-5 mb-5 border-bottom border-secondary"></div>
-      <h6 class="text-uppercase mt-5 mb-3 font-weight-bold">{{__('shop.welcome.price')}}</h6>
+      <h6 class="text-uppercase mt-5 mb-3 font-weight-bold">Fitr po cenie:<!--{{__('shop.welcome.price')}}--></h6>
       <div class="price-filter-control">
         <input type="number" class="form-control w-50 pull-left mb-2" placeholder="50" name="filter[price_min]" id="price-min-control">
         <input type="number" class="form-control w-50 pull-right" placeholder="150" name="filter[price_max]" id="price-max-control">
       </div>
       <input id="ex2" type="text" class="slider " value="50,150" data-slider-min="10" data-slider-max="200" data-slider-step="5" data-slider-value="[50,150]" data-value="50,150" style="display: none;">
       <div class="divider mt-5 mb-5 border-bottom border-secondary"></div>
-      <a href="#" class="btn btn-lg btn-block btn-primary mt-5" id="filter-button">{{__('shop.welcome.filter')}}</a>
+      <a href="#" class="btn btn-lg btn-block btn-primary mt-5" id="filter-button">filtr<!--{{__('shop.welcome.filter')}}--></a>
     </form>
 
   </div>

@@ -4,12 +4,16 @@
 <div class="container">
     <div class ="row">
             <div class="col-6">
-               <h1>{{__('shop.product.index_title')}}</h1>
+               <!--<h1>{{__('shop.product.index_title')}}</h1>-->
+               <h1>Produkty:</h1>
+
             </div>
             <div class="col-6">
                <a class="float-right" href="{{route('products.create')}}">
-               <button type="button" class="btn btn-primary">{{__('shop.button.add')}}</button>
-                </a>
+               <!--<button type="button" class="btn btn-primary">{{__('shop.button.add')}}</button>-->
+               <button type="button" class="btn btn-primary">Dodaj produkt</button>
+
+               </a>
             </div>
     </div>
 
@@ -19,12 +23,23 @@
             <thead>
                 <tr>
                 <th scope="col">#</th>
+
+                <th scope="col">Name:</th>
+                <th scope="col">Opis:</th>
+                <th scope="col">Ilość:</th>
+                <th scope="col">Cena:</th>
+                <th scope="col">Kategoria:</th>
+                <th scope="col">Akcja:</th>
+
+                    <!--
                 <th scope="col">{{__('shop.product.fields.name')}}</th>
                 <th scope="col">{{__('shop.product.fields.description')}}</th>
                 <th scope="col">{{__('shop.product.fields.amount')}}</th>
                 <th scope="col">{{__('shop.product.fields.price')}}</th>
                 <th scope="col">{{__('shop.product.fields.category')}}</th>
                 <th scope="col">{{__('shop.columns.actions')}}</th>
+                -->
+
                 </tr>
             </thead>
             <tbody>

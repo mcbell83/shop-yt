@@ -37,3 +37,7 @@ Route::get('/products/edit/{product}', [ProductController::class, 'edit'])->name
 Route::post('/products/update/{product}', [ProductController::class, 'update'])->name('products.update')->middleware('auth');
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy')->middleware('auth');
 Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

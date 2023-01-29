@@ -8,7 +8,7 @@
       <th scope="col">#</th>
       <th scope="col">Email</th>
       <th scope="col">Imię</th>
-      <th scope="col">Nazwisko</th>
+      <!--<th scope="col">Nazwisko</th>-->
       <th scope="col">Akcje</th>
     </tr>
   </thead>
@@ -18,7 +18,7 @@
         <th scope="row">{{$user->id}}</th>
         <td> {{$user->email}}</td>
         <td>{{$user->name}}</td>
-        <td>-</td>
+        <!--<td>-</td>-->
         <td>
             <button class="btn btn-danger btn-sm delete" data-id="{{$user->id}}">
                 x</button>
